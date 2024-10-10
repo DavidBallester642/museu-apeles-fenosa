@@ -1,0 +1,326 @@
+@charset "UTF-8";
+#contenedor_inicio {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  background-color: rgb(186, 185, 182);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  width: 95%;
+  max-width: 1300px;
+}
+#contenedor_inicio .celda {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 20%;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  justify-content: center;
+}
+#contenedor_inicio .celda img {
+  height: 120px;
+  width: 120px;
+  margin: 0 auto;
+  display: block;
+}
+#contenedor_inicio .celda:hover {
+  transform: scale(1.05);
+}
+#contenedor_inicio .celda h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+#contenedor_inicio .celda p {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 20px;
+}
+#contenedor_inicio .celda a {
+  text-decoration: none;
+}
+#contenedor_inicio .celda a button {
+  background-color: #3c516f;
+  width: 100%;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+#contenedor_inicio .celda a button:hover {
+  background-color: #36619c;
+}
+#contenedor_inicio .celda a button:active {
+  background-color: #3165af;
+  transform: scale(0.98);
+}
+
+.login-page {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background: url("../views/img/FondoLogin.png") no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.login-page .img {
+  width: 50%;
+}
+.login-page .container_login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 8px;
+  padding: 40px;
+  width: 350px;
+  max-width: 100%;
+}
+.login-page .container_login .title {
+  padding: 15px;
+  text-align: center;
+  color: White;
+  font-size: 24px;
+  border-radius: 8px 8px 0 0;
+  width: 100%;
+}
+.login-page .container_login .login-form {
+  background-color: White;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 8px 8px;
+  width: 100%;
+}
+.login-page .container_login .login-form h3 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+.login-page .container_login .login-form form {
+  display: flex;
+  flex-direction: column;
+}
+.login-page .container_login .login-form form label {
+  margin-bottom: 5px;
+  color: #333;
+}
+.login-page .container_login .login-form form input[type=text],
+.login-page .container_login .login-form form input[type=password] {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+.login-page .container_login .login-form form input[type=submit] {
+  padding: 10px;
+  background-color: #777;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.login-page .container_login .login-form form input[type=submit]:hover {
+  background-color: #5e5e5e;
+}
+.login-page .container_login .login-form form .forgot-password {
+  text-align: center;
+  margin-top: 10px;
+}
+.login-page .container_login .login-form form .forgot-password a {
+  text-decoration: none;
+  color: #777;
+}
+.login-page .container_login .login-form form .forgot-password a:hover {
+  color: #5e5e5e;
+}
+
+h1 {
+  color: rgb(58, 58, 58);
+  margin-left: 80px;
+  margin-top: 20px; /* Añadimos margen superior */
+  margin-bottom: 10px; /* Separación entre título y nav */
+}
+
+nav {
+  margin-left: 70px;
+  margin-right: 70px;
+  border-radius: 20px;
+  margin-bottom: 30px; /* Añadir separación debajo del nav */
+}
+nav ul {
+  list-style-type: none;
+  padding: 20px;
+  background-color: rgb(58, 58, 58);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav ul li {
+  display: inline-block;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+table th {
+  border: 1px solid black;
+  padding: 10px;
+  background-color: rgb(174, 174, 174);
+  color: white;
+}
+table td {
+  border: 1px solid black;
+  padding: 10px;
+  background-color: white;
+}
+
+#cerrarSession {
+  width: 35px;
+  height: 35px;
+  float: right;
+  margin-right: 80px;
+  margin-top: 8px;
+}
+
+.adminUser {
+  margin: 20px auto;
+  border-radius: 15px;
+  background-color: white;
+  padding: 20px;
+  width: 80%;
+  height: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.adminUser h3 {
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: left;
+  margin-top: 0px;
+}
+.adminUser form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  align-items: center;
+}
+.adminUser form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.adminUser form input[type=text],
+.adminUser form input[type=password],
+.adminUser form select {
+  width: 100%;
+  background-color: rgb(222, 220, 220);
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+.adminUser form input[type=submit] {
+  grid-column: 5;
+  margin-left: 70px;
+  width: 100px;
+  padding: 10px;
+  background-color: rgb(58, 58, 58);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+.adminUser form label[for=username] {
+  grid-column: 1;
+}
+.adminUser form input#username {
+  grid-column: 2;
+  width: 200px;
+}
+.adminUser form label[for=password] {
+  grid-column: 3;
+}
+.adminUser form input#password {
+  grid-column: 4;
+  width: 200px;
+}
+.adminUser form label[for=confirm_password] {
+  grid-column: 3;
+}
+.adminUser form input#confirm_password {
+  grid-column: 4;
+  width: 200px;
+}
+.adminUser form label[for=rol] {
+  grid-column: 1;
+}
+.adminUser form select#rol {
+  grid-column: 2;
+  width: 220px;
+}
+
+.adminVocabulari {
+  margin: 20px auto;
+  border-radius: 15px;
+  background-color: white;
+  padding: 20px;
+  width: 80%;
+  height: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.adminVocabulari h3 {
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: left;
+  margin-top: 0px;
+}
+.adminVocabulari a button {
+  background-color: rgb(58, 58, 58);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+.adminVocabulari a button:hover {
+  background-color: #adadae;
+}
+.adminVocabulari a button:active {
+  background-color: #3165af;
+  transform: scale(0.98);
+}
+
+* {
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  background: url("../views/img/FondoLogin.png") no-repeat center center fixed;
+  background-size: cover;
+}/*# sourceMappingURL=main.css.map */

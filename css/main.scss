@@ -1,0 +1,16 @@
+@import 'variables';
+@import 'inicio';
+@import 'login';
+@import 'taulaObres';
+@import 'administracio';
+
+
+*{
+    font-family: $font-family;
+
+}
+
+body{
+    background: url('../views/img/FondoLogin.png') no-repeat center center fixed; // Ruta de la imagen de fondo
+    background-size: cover;
+}

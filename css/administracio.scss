@@ -1,0 +1,133 @@
+@import 'variables';
+
+#cerrarSession {
+  width: 35px;
+  height: 35px;
+  float: right;
+  margin-right: 80px;
+  margin-top: 8px;
+}
+
+.adminUser {
+  margin: 20px auto; // Centrar horizontalmente y aplicar margen superior/inferior
+  border-radius: $border-radius-administration;
+  background-color: white;
+  padding: $form-padding-administration;
+  width: 80%; // Ocupar el 80% del ancho disponible
+  height: auto; // Ajustar la altura al contenido
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); // Sombra ligera
+
+  h3 {
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: left; 
+    margin-top: 0px;
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; // Cuatro columnas iguales
+    grid-column-gap: 20px; // Espacio entre columnas
+    grid-row-gap: 20px; // Espacio entre filas
+    align-items: center; // Centrar los elementos verticalmente
+
+    label {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    select {
+      width: 100%; // Asegurarse de que los inputs ocupen el ancho completo de su columna
+      
+      background-color: $form-input-bg;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    input[type="submit"] {
+      grid-column: 5; // Ubicar el botón en la última columna
+      margin-left: 70px;
+      width: 100px;
+      padding: 10px;
+      background-color: $primaryGrey-tabla-administracio;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    // Distribución en cuatro columnas
+
+    label[for="username"] {
+      grid-column: 1; // Primera columna: Etiqueta de Nombre
+    }
+    input#username {
+      grid-column: 2; // Segunda columna: Input de Nombre
+      width: 200px;
+    }
+
+    label[for="password"] {
+      grid-column: 3; // Tercera columna: Etiqueta de Contraseña
+    }
+    input#password {
+      grid-column: 4; // Cuarta columna: Input de Contraseña
+      width: 200px;
+    }
+
+    label[for="confirm_password"] {
+      grid-column: 3; // Tercera columna: Etiqueta de Confirmar Contraseña
+    }
+    input#confirm_password {
+      grid-column: 4; // Cuarta columna: Input de Confirmar Contraseña
+      width: 200px;
+    }
+
+    label[for="rol"] {
+      grid-column: 1; // Primera columna: Etiqueta de Rol
+    }
+    select#rol {
+      grid-column: 2; // Segunda columna: Select de Rol
+      width: 220px;
+    }
+  }
+}
+
+.adminVocabulari{
+  margin: 20px auto; // Centrar horizontalmente y aplicar margen superior/inferior
+  border-radius: $border-radius-administration;
+  background-color: white;
+  padding: $form-padding-administration;
+  width: 80%; // Ocupar el 80% del ancho disponible
+  height: auto; // Ajustar la altura al contenido
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); // Sombra ligera
+
+  h3 {
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: left; 
+    margin-top: 0px;
+  }
+
+  a button {
+    background-color: $primaryGrey-tabla-administracio;
+    color: white;
+    padding: 10px 20px; // Espaciado interno
+    border: none; // Eliminar el borde del botón
+    border-radius: 5px; // Bordes redondeados
+    cursor: pointer; // Puntero de mano al pasar sobre el botón
+    font-size: 16px; // Tamaño de la fuente
+    transition: background-color 0.3s ease; // Transición suave al cambiar el color
+
+    &:hover {
+        background-color: #adadae; // Color de fondo cuando el ratón está encima
+    }
+
+    &:active {
+        background-color: #3165af; // Color del botón cuando está activo (clicado)
+        transform: scale(0.98); // Pequeña reducción para dar efecto de clic
+    }
+}
+}

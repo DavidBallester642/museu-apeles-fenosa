@@ -1,0 +1,64 @@
+#contenedor_inicio {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  background-color: rgb(186, 185, 182);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  width: 95%;
+  max-width: 1300px;
+}
+#contenedor_inicio .celda {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 20%;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  justify-content: center;
+}
+#contenedor_inicio .celda img {
+  height: 120px;
+  width: 120px;
+  margin: 0 auto;
+  display: block;
+}
+#contenedor_inicio .celda:hover {
+  transform: scale(1.05);
+}
+#contenedor_inicio .celda h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+#contenedor_inicio .celda p {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 20px;
+}
+#contenedor_inicio .celda a {
+  text-decoration: none;
+}
+#contenedor_inicio .celda a button {
+  background-color: #3c516f;
+  width: 100%;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+#contenedor_inicio .celda a button:hover {
+  background-color: #36619c;
+}
+#contenedor_inicio .celda a button:active {
+  background-color: #3165af;
+  transform: scale(0.98);
+}/*# sourceMappingURL=inicio.css.map */

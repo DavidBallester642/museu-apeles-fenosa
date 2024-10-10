@@ -1,0 +1,115 @@
+#cerrarSession {
+  width: 35px;
+  height: 35px;
+  float: right;
+  margin-right: 80px;
+  margin-top: 8px;
+}
+
+.adminUser {
+  margin: 20px auto;
+  border-radius: 15px;
+  background-color: white;
+  padding: 20px;
+  width: 80%;
+  height: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.adminUser h3 {
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: left;
+  margin-top: 0px;
+}
+.adminUser form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  align-items: center;
+}
+.adminUser form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.adminUser form input[type=text],
+.adminUser form input[type=password],
+.adminUser form select {
+  width: 100%;
+  background-color: rgb(222, 220, 220);
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+.adminUser form input[type=submit] {
+  grid-column: 5;
+  margin-left: 70px;
+  width: 100px;
+  padding: 10px;
+  background-color: rgb(58, 58, 58);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+.adminUser form label[for=username] {
+  grid-column: 1;
+}
+.adminUser form input#username {
+  grid-column: 2;
+  width: 200px;
+}
+.adminUser form label[for=password] {
+  grid-column: 3;
+}
+.adminUser form input#password {
+  grid-column: 4;
+  width: 200px;
+}
+.adminUser form label[for=confirm_password] {
+  grid-column: 3;
+}
+.adminUser form input#confirm_password {
+  grid-column: 4;
+  width: 200px;
+}
+.adminUser form label[for=rol] {
+  grid-column: 1;
+}
+.adminUser form select#rol {
+  grid-column: 2;
+  width: 220px;
+}
+
+.adminVocabulari {
+  margin: 20px auto;
+  border-radius: 15px;
+  background-color: white;
+  padding: 20px;
+  width: 80%;
+  height: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.adminVocabulari h3 {
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: left;
+  margin-top: 0px;
+}
+.adminVocabulari a button {
+  background-color: rgb(58, 58, 58);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+.adminVocabulari a button:hover {
+  background-color: #adadae;
+}
+.adminVocabulari a button:active {
+  background-color: #3165af;
+  transform: scale(0.98);
+}/*# sourceMappingURL=administracio.css.map */

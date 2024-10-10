@@ -1,0 +1,130 @@
+@import 'variables'; // Importa tus variables aquí
+
+// Encapsula todo el diseño dentro de una clase principal
+.login-page {
+    margin: 0;
+    padding: 0;
+    font-family: $font-family;
+    background: url('../views/img/FondoLogin.png') no-repeat center center fixed; // Ruta de la imagen de fondo
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    .img{
+           width: 50%;
+
+    }
+
+
+        // Contenedor con el fondo negro y opacidad
+        .container_login {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: $primary-bg-color-login; // Fondo negro semi-transparente
+            border-radius: $border-radius-login;
+            padding: 40px;
+            width: $form-width-login;
+            max-width: 100%;
+
+
+        // Div del título (Inici de Sessió)
+            .title {
+                padding: 15px;
+                text-align: center;
+                color: $title-text-color-login; // Texto blanco
+                font-size: 24px;
+                border-radius: $border-radius-login $border-radius-login 0 0; // Bordes redondeados en la parte superior
+                width: 100%;
+                
+            }
+
+            // Div del formulario de login
+        .login-form {
+            background-color: $form-bg-color-login; // Fondo blanco para el formulario
+            padding: $form-padding-login;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            border-radius: $border-radius-login $border-radius-login; // Bordes redondeados en la parte inferior
+            width: 100%;
+
+            h3 {
+                text-align: center;
+                color: $text-color-login;
+                margin-bottom: 20px;
+                font-size: 24px;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+
+                label {
+                    margin-bottom: 5px;
+                    color: $text-color-login;
+                }
+
+                input[type="text"],
+                input[type="password"] {
+                    padding: $input-padding-login;
+                    margin-bottom: 15px;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    font-size: 16px;
+                }
+
+                input[type="submit"] {
+                    padding: $input-padding-login;
+                    background-color: $button-color-login;
+                    color: white;
+                    border: none;
+                    border-radius: 4px;
+                    font-size: 16px;
+                    cursor: pointer;
+                }
+
+                input[type="submit"]:hover {
+                    background-color: darken($button-color-login, 10%);
+                }
+
+                .forgot-password {
+                    text-align: center;
+                    margin-top: 10px;
+
+                    a {
+                        text-decoration: none;
+                        color: $button-color-login;
+
+                        &:hover {
+                            color: darken($button-color-login, 10%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+        
+
+
+
+
+
+
+        
+
+
+
+
+
+        
+
+
+    
+
+
+
+   

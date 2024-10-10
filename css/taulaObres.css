@@ -1,0 +1,50 @@
+@charset "UTF-8";
+h1 {
+  color: rgb(58, 58, 58);
+  margin-left: 80px;
+  margin-top: 20px; /* Añadimos margen superior */
+  margin-bottom: 10px; /* Separación entre título y nav */
+}
+
+nav {
+  margin-left: 70px;
+  margin-right: 70px;
+  border-radius: 20px;
+  margin-bottom: 30px; /* Añadir separación debajo del nav */
+}
+nav ul {
+  list-style-type: none;
+  padding: 20px;
+  background-color: rgb(58, 58, 58);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav ul li {
+  display: inline-block;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+table th {
+  border: 1px solid black;
+  padding: 10px;
+  background-color: rgb(174, 174, 174);
+  color: white;
+}
+table td {
+  border: 1px solid black;
+  padding: 10px;
+  background-color: white;
+}/*# sourceMappingURL=taulaObres.css.map */

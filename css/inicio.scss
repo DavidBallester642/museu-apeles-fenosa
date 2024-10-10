@@ -1,0 +1,78 @@
+#contenedor_inicio {
+    
+    display: flex;
+    justify-content: space-between; // Espacio entre los items
+    align-items: flex-start;        // Alineación en la parte superior
+    padding: 20px;
+    background-color: rgb(186, 185, 182); // Fondo blanco
+    border-radius: 15px;            // Bordes redondeados
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Sombra leve para dar profundidad
+    margin: 20px auto;
+    width: 95%;
+    max-width: 1300px;              // Tamaño máximo del contenedor
+
+    .celda {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        width: 20%;                   // Fondo blanco para cada celda
+        padding: 20px;                // Cuatro columnas con espacio entre ellas
+        text-align: center;           // Centrar el contenido dentro de cada celda
+        border-radius: 10px;          // Bordes redondeados en cada celda
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // Sombra suave
+        transition: transform 0.3s ease; // Transición suave en hover
+        justify-content: center;
+
+        img{
+            height: 120px;
+            width: 120px;
+            margin: 0 auto;
+            display: block;
+         
+            
+        }
+
+        &:hover {
+            transform: scale(1.05);   // Efecto zoom al pasar el mouse
+        }
+
+           
+
+        h3 {
+            font-size: 20px;
+            color: #333;              // Color del título
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 14px;
+            color: #777;              // Color del texto
+            margin-bottom: 20px;
+        }
+
+        a {
+            text-decoration: none;   // Eliminar subrayado del enlace
+        }
+
+        a button {
+            background-color: #3c516f; // Color de fondo del botón
+            width: 100%; // Se ajusta al ancho completo de la celda
+            color: white; // Color del texto
+            padding: 10px 20px; // Espaciado interno
+            border: none; // Eliminar el borde del botón
+            border-radius: 5px; // Bordes redondeados
+            cursor: pointer; // Puntero de mano al pasar sobre el botón
+            font-size: 16px; // Tamaño de la fuente
+            transition: background-color 0.3s ease; // Transición suave al cambiar el color
+
+            &:hover {
+                background-color: #36619c; // Color de fondo cuando el ratón está encima
+            }
+
+            &:active {
+                background-color: #3165af; // Color del botón cuando está activo (clicado)
+                transform: scale(0.98); // Pequeña reducción para dar efecto de clic
+            }
+        }
+    }
+}
