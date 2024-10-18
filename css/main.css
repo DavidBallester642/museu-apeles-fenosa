@@ -226,6 +226,7 @@ table td {
 .adminUser form {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   grid-column-gap: 20px;
   grid-row-gap: 20px;
   align-items: center;
@@ -245,6 +246,7 @@ table td {
 }
 .adminUser form input[type=submit] {
   grid-column: 5;
+  grid-row: 3;
   margin-left: 70px;
   width: 100px;
   padding: 10px;
@@ -256,31 +258,58 @@ table td {
 }
 .adminUser form label[for=username] {
   grid-column: 1;
+  grid-row: 1;
 }
 .adminUser form input#username {
   grid-column: 2;
+  grid-row: 1;
   width: 200px;
 }
 .adminUser form label[for=password] {
   grid-column: 3;
+  grid-row: 1;
 }
 .adminUser form input#password {
   grid-column: 4;
+  grid-row: 1;
   width: 200px;
 }
 .adminUser form label[for=confirm_password] {
   grid-column: 3;
+  grid-row: 2;
 }
 .adminUser form input#confirm_password {
   grid-column: 4;
+  grid-row: 2;
   width: 200px;
 }
 .adminUser form label[for=rol] {
   grid-column: 1;
+  grid-row: 2;
 }
 .adminUser form select#rol {
   grid-column: 2;
+  grid-row: 2;
   width: 220px;
+}
+.adminUser form a button {
+  display: grid;
+  grid-column: 4;
+  grid-row: 3;
+  background-color: rgb(58, 58, 58);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.adminUser form a button:hover {
+  background-color: #adadae;
+}
+.adminUser form a button:active {
+  background-color: #3165af;
+  transform: scale(0.98);
 }
 
 .adminVocabulari {
@@ -305,7 +334,6 @@ table td {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 16px;
   transition: background-color 0.3s ease;
 }
 .adminVocabulari a button:hover {
@@ -314,6 +342,34 @@ table td {
 .adminVocabulari a button:active {
   background-color: #3165af;
   transform: scale(0.98);
+}
+
+table {
+  border: 1px solid black;
+  border-radius: 15px;
+}
+table tr td img {
+  width: 30px;
+  height: 30px;
+}
+
+.editUser {
+  margin: 20px auto;
+  border-radius: 15px;
+  background-color: white;
+  padding: 20px;
+  width: 80%;
+  height: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.editUser h3 {
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: left;
+  margin-top: 0px;
+}
+.editUser form {
+  margin: 50px;
 }
 
 * {

@@ -1,0 +1,24 @@
+@import 'variables';
+
+.editUser{
+  margin: 20px auto; // Centrar horizontalmente y aplicar margen superior/inferior
+  border-radius: $border-radius-administration;
+  background-color: white;
+  padding: $form-padding-administration;
+  width: 80%; // Ocupar el 80% del ancho disponible
+  height: auto; // Ajustar la altura al contenido
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); // Sombra ligera
+
+
+  h3 {
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: left;
+    margin-top: 0px;
+  }
+
+
+  form{
+    margin: 50px;
+  }
+}

@@ -2,7 +2,6 @@
 <?
 session_start();
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,12 +9,13 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <title>Document</title>
+    <title>Index</title>
 </head>
 <body>
-   
-    <?php 
+    <h2>
     
+    </h2>
+    <?php 
     require_once "autoload.php";
 
     if (isset($_GET['controller'])){
@@ -33,15 +33,10 @@ session_start();
         else{
             $action ="loginForm";
         }
-
         $controlador->$action();   
     }else{
-
         echo "No existe el controlador";
     }
-
     ?>
 </body>
 </html>
-
-

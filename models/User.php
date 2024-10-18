@@ -1,5 +1,4 @@
 <?php
-
 class User {
     private $conn;
     private $table = "usuari";  // Asegúrate de que esta tabla exista en tu base de datos
@@ -10,9 +9,9 @@ class User {
         $this->conn = $database->connect();
     }
 
-    // Método para comprobar si el usuario existe y es válido
+    // Método para comprobar si el usuario existe, es válido y que tipo de rol tiene.
     public function comprobarUsuario($username, $password) {
-        $query = "SELECT * FROM " . $this->table . " WHERE nom_usuari = :username AND password = :password";
+        $query = "SELECT tipus_usuari FROM " . $this->table . " WHERE nom_usuari = :username AND contrasenya = :password";
         $stmt = $this->conn->prepare($query);
         
         // Vincular los parámetros de entrada
@@ -21,13 +20,15 @@ class User {
         
         // Ejecutar la consulta
         $stmt->execute();
-
-        // Comprobar si el usuario existe
-        $resultado = false;
+    
+        // Inicializar una variable para almacenar el tipo de usuario
+        $tipoUsuario = false;
+    
+        // Comprobar si el usuario existe y obtener el tipo de usuario
         if ($stmt->rowCount() > 0) {
-            $resultado = true;
+            $tipoUsuario = $stmt->fetch(PDO::FETCH_ASSOC); // Almacena el tipo de usuario
         }
-        return $resultado;
+        return $tipoUsuario; // Usuario no encontrado o el usuario
     }
 
     public function usuarioExiste($username) {
@@ -62,7 +63,7 @@ class User {
         }
     
         // Preparar la consulta para insertar el nuevo usuario
-        $query = "INSERT INTO " . $this->table . " (nom_usuari, password, tipus_usuari) VALUES (:username, :password, :rol)";
+        $query = "INSERT INTO " . $this->table . " (nom_usuari, contrasenya, tipus_usuari) VALUES (:username, :password, :rol)";
         $stmt = $this->conn->prepare($query);
     
         // Vincular los parámetros
@@ -80,5 +81,61 @@ class User {
         }
         return $mensaje;
     }
+
+    //metodo para obtener todos los usuarios
+    public function obtenerTodosUsuarios() {
+        $query = "SELECT nom_usuari, contrasenya, tipus_usuari FROM " . $this->table;
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute();
+        
+        return $stmt->fetchAll(PDO::FETCH_ASSOC); // Devuelve un array con todos los usuarios
+    }
+
+
+     // Método para eliminar un usuario
+     public function eliminarUsuario($username) {
+        $query = "DELETE FROM " . $this->table . " WHERE nom_usuari = :username";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':username', $username);
+        return $stmt->execute();
+    }
+
+
+    public function obtenerUsuarioPorUsername($username) {
+        $query = "SELECT * FROM " . $this->table . " WHERE nom_usuari = :username";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':username', $username);
+        $stmt->execute();
+    
+        // Verifica si el usuario existe
+        if ($stmt->rowCount() > 0) {
+            return $stmt->fetch(PDO::FETCH_ASSOC); // Retorna los datos del usuario
+        } else {
+            return false;
+        }
+    }
+
+
+    public function editarUsuario($username, $password, $rol) {
+        $query = "UPDATE " . $this->table . " SET contrasenya = :password, tipus_usuari = :rol WHERE nom_usuari = :username";
+        $stmt = $this->conn->prepare($query);
+    
+        $stmt->bindParam(':username', $username);
+        $stmt->bindParam(':password', $password);
+        $stmt->bindParam(':rol', $rol);
+    
+        try {
+            if ($stmt->execute()) {
+                return "Usuario actualizado con éxito.";
+            } else {
+                return "Error al actualizar el usuario.";
+            }
+        } catch (PDOException $ex) {
+            return "Error al actualizar el usuario: " . $ex->getMessage();
+        }
+    }
+    
+    
+
 }
 ?>

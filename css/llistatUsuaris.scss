@@ -1,0 +1,17 @@
+@import 'variables';
+
+
+table{
+    border: 1px solid black;
+    border-radius: 15px;
+
+    tr{
+        td{
+            img{
+                width: 30px;
+                height: 30px;
+
+            }
+        }
+    }
+}
